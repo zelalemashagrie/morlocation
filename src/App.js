@@ -54,9 +54,17 @@ function App() {
           <h3>  <img src={morImage} alt="MOR Logo" />
             <p>Work Time🕒 Mon-Fri: 2:00 PM – 11:00 PM ---- 🕒 Sat: 2:00 PM – 6:00 PM</p>
           </h3>
+         
           <p style={{ textAlign: "center", fontWeight: "bold", color: "red", fontSize: "18px" }}>
   Where do you want to go?
 </p>
+      <p style={{ textAlign: "center", fontWeight: "bold", color: "red", fontSize: "18px" }}>
+       <h3 style={{ textAlign: "center", fontWeight: "bold", color: "red", fontSize: "18px" }}>
+  
+የት መሄድ ትፈልጋለህ?
+</h3>
+</p>
+በግንባታ ላይ ያሉትን ሁሉንም ለማየት እባክዎን ጠቅ ያድርጉ?<br/>
 Please click to see all under build works.
         </div>
 

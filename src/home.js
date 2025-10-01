@@ -128,6 +128,7 @@ function Home() {
       <h3 style={{ color: "#f57f08ff", marginBottom: "10px" }}>
         Please click on the builds to see all floors. Click top BUILD button
       </h3>
+    
     </div>
   );
 }
