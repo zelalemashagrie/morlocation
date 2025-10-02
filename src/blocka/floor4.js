@@ -1,76 +1,96 @@
 import React from "react";
-import zdImage from "../assets/zd.png";
-import zddImage from "../assets/zdd.png";
-import morImage from "../assets/mor.png";
 
 function Floorb4() {
-  // Styles as objects
+  // Styles
   const containerStyle = {
-    padding: "20px",
+    padding: "40px 20px",
+    fontFamily: "Arial, sans-serif",
+    background: "linear-gradient(180deg,#f9fcff,#eef7fb)",
+    borderRadius: "12px",
+    boxShadow: "0 6px 24px rgba(0,0,0,0.08)",
+    maxWidth: "900px",
+    margin: "20px auto",
     textAlign: "center",
-    fontFamily: "Arial, sans-serif"
   };
 
-  const h2Style = {
-    color: "#333",
-    marginBottom: "5px"
+  const titleStyle = {
+    fontSize: "28px",
+    fontWeight: "700",
+    color: "#0b3556",
+    marginBottom: "10px",
   };
 
-  const h3Style = {
+  const descStyle = {
+    fontSize: "16px",
     color: "#555",
-    marginBottom: "15px"
-  };
-
-  const pStyle = {
-    color: "#666",
-    marginBottom: "15px"
+    marginBottom: "30px",
+    lineHeight: "1.6",
   };
 
   const listStyle = {
-    textAlign: "left",
-    display: "inline-block",
-    marginBottom: "30px"
+    listStyle: "none",
+    padding: 0,
+    margin: "0 auto 40px",
+    display: "grid",
+    gridTemplateColumns: "repeat(auto-fit,minmax(220px,1fr))",
+    gap: "16px",
+    maxWidth: "600px",
   };
 
-  const galleryStyle = {
+  const listItemStyle = {
+    background: "#fff",
+    padding: "16px",
+    borderRadius: "10px",
+    boxShadow: "0 4px 12px rgba(0,0,0,0.06)",
+    fontWeight: "600",
+    color: "#0b3556",
+  };
+
+  const sectionTitle = {
+    fontSize: "22px",
+    fontWeight: "700",
+    marginBottom: "20px",
+    color: "#0b3556",
+  };
+
+  const repListStyle = {
     display: "flex",
     justifyContent: "center",
     gap: "20px",
-    flexWrap: "wrap"
+    flexWrap: "wrap",
   };
 
-  const galleryItemStyle = {
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "center"
-  };
-
-  const imgStyle = {
-    width: "200px",
-    height: "200px",
-    objectFit: "cover",
+  const repItemStyle = {
+    background: "#fff",
+    padding: "14px 20px",
     borderRadius: "8px",
-    boxShadow: "0 3px 6px rgba(0,0,0,0.15)",
-    marginBottom: "8px"
-  };
-
-  const captionStyle = {
-    fontWeight: "bold",
-    color: "#333"
+    boxShadow: "0 3px 8px rgba(0,0,0,0.05)",
+    fontWeight: "600",
+    color: "#333",
+    minWidth: "180px",
   };
 
   return (
     <div style={containerStyle}>
-      <h2 style={h2Style}>Welcome to Build A- Floor 4</h2>
-      <h3 style={h3Style}> Internal Audit </h3>
-      <ul style={listStyle}>ours Servise for thise floor
-        <h3/>
-        <li>1.Audit</li>
-        <li>2.Check Auditfainancial</li>
-        
-        
+      <h2 style={titleStyle}>Build A – Floor 4</h2>
+      <p style={descStyle}>
+        This floor houses the <strong>Internal Audit Department</strong> providing 
+        financial and operational auditing services to ensure transparency and accuracy.
+      </p>
+
+      {/* Services */}
+      <h3 style={sectionTitle}>Our Services</h3>
+      <ul style={listStyle}>
+        <li style={listItemStyle}>✅ Audit</li>
+        <li style={listItemStyle}>✅ Financial & Operational Checks</li>
       </ul>
-<h1>Representative Person </h1>
+
+      {/* Representatives */}
+      <h3 style={sectionTitle}>Representative Persons</h3>
+      <div style={repListStyle}>
+        <div style={repItemStyle}>👤 Head of Internal Audit</div>
+        <div style={repItemStyle}>👤 Senior Auditor</div>
+      </div>
     </div>
   );
 }

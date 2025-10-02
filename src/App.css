@@ -1,104 +1,223 @@
-/* Container */
-.container {
-font-family: Arial, sans-serif;
-text-align: center;
-padding: 1px;
+/* App.css
+   Clean, responsive styles for your App.js layout.
+   Touch-friendly menu, dropdowns, logo area, and basic page container.
+*/
+
+/* Reset / base */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body, #root { height: 100%; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: #99cb04;
+  color: #222;
+  line-height: 1.45;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  padding: 0px;
 }
 
-/* Logo Section */
+/* App container */
+.container {
+
+  margin: 340 auto;
+  background: #f9f6f6;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(12, 32, 64, 0.08);
+  overflow: hidden;
+}
+
+/* Logo / top info */
 .logo {
-margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 22px;
+  background: linear-gradient(180deg, #ffffff 0%, #f3fbff 100%);
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+  text-align: center;
 }
 
 .logo img {
-width: 110px;
-height: auto;
-border-radius: 10px;
-position: center;
-box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
-margin-bottom: 15px;
+  height: 70px;
+  width: auto;
+  object-fit: contain;
+  display: block;
 }
 
+/* Heading text inside logo area */
 .logo h3 {
-margin: 10px 0;
-font-size: 18px;
-color: #333;
+  font-size: 18px;
+  font-weight: 100;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1px;
 }
 
 .logo p {
-margin: 5px 0;
-font-size: 14px;
-color: #555;
+  font-size: 14px;
+  color: black;
 }
 
-/* Navigation Menu */
-.menu {
-display: flex;
-justify-content: center;
-gap: 30px;
-margin-bottom: 30px;
+/* Important red question text (user had inline red) */
+.logo .important {
+  color: #c62828; /* red */
+  font-weight: 700;
+  font-size: 18px;
+  margin-top: 4px;
 }
 
-/* Menu Items */
-.menu-item {
-padding: 10px 30px;
-background: #0073e6;
-color: white;
-text-decoration: none;
-font-weight: bold;
-border-radius: 5px;
-transition: background 0.3s ease;
-}
-
-.menu-item:hover {
-background: #005bb5;
-}
-
-/* Dropdown Wrapper */
-.dropdown {
-position: relative;
-display: inline-block;
-}
-
-/* Dropdown Content */
-.dropdown-content {
-display: flex;
-flex-direction: column;
-position: absolute;
-top: 20px;
-left: 0;
-background: white;
-min-width: 140px;
-border: 1px solid #ccc;
-border-radius: 5px;
-z-index: 999;
-box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-/* Dropdown Links */
-.dropdown-content a {
-padding: 20px;
-text-decoration: none;
-color: #333;
-border-bottom: 1px solid #eee;
-transition: background 0.2s ease;
-}
-
-.dropdown-content a:last-child {
-border-bottom: none;
-}
-
-.dropdown-content a:hover {
-background: #f0f0f0;
-color: #0073e6;
-}
+/* Navigation menu */
 .menu {
   display: flex;
   justify-content: center;
-  gap: 20px;
-  padding: 10px;
-  position: sticky;
-  top: 0;      /* stays at top of window */
-  z-index: 1000;
-  /* background-color: #8cb7e7; */
+  gap: 30px;
+  padding: 12px 16px;
+  background: #fafafa;
+  border-bottom: 1px solid rgba(0,0,0,0.04);
+  flex-wrap: wrap;
+}
+
+/* Dropdown container */
+.dropdown {
+  position: relative;
+  user-select: none;
+}
+
+/* Menu item styling */
+.menu-item {
+  display: auto;
+  padding: 10px 30px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #f9f6ef;
+  font-weight: 900;
+  letter-spacing: 0.2px;
+  background: rgb(17, 134, 244);
+  transition: transform .12s ease, box-shadow .12s ease;
+  cursor: pointer;
+}
+
+/* Hover / active look */
+.menu-item:hover,
+.menu-item:focus {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(11,53,86,0.06);
+}
+
+/* Dropdown content (hidden by default; visible via React state) */
+.dropdown-content {
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 50%;
+  transform: translateX(-50%);
+  min-width: 180px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(11,53,86,0.12);
+  padding: 8px;
+  z-index: 300;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  border: 1px solid rgba(11,53,86,0.06);
+}
+
+/* Links inside dropdown */
+.dropdown-content a {
+  display: block;
+  padding: 8px 12px;
+  text-decoration: none;
+  color: #09304a;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: background .12s ease;
+}
+
+/* Hover for each floor link */
+.dropdown-content a:hover {
+  background: rgba(9,48,74,0.06);
+}
+
+/* Route content area (where Floor components render) */
+.route-content {
+  padding: 22px;
+  min-height: 340px; /* avoids collapse when empty */
+}
+
+/* Generic floor card styles (use inside individual Floor components) */
+.floor-card {
+  background: linear-gradient(180deg,#ffffff,#f7fdff);
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid rgba(7,45,73,0.04);
+  box-shadow: 0 6px 20px rgba(9,48,74,0.04);
+}
+
+/* Footer */
+footer {
+  padding: 16px;
+  text-align: center;
+  font-size: 13px;
+  color: #6b7280;
+  border-top: 1px solid rgba(0,0,0,0.04);
+  background: #fafafa;
+}
+
+/* Make clickable/touch targets larger on smaller screens */
+@media (max-width: 720px) {
+  .menu {
+    gap: 8px;
+    padding: 10px;
+  }
+
+  .menu-item {
+    padding: 12px 16px;
+    font-size: 15px;
+  }
+
+  .dropdown-content {
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+    min-width: 160px;
+  }
+
+  .logo img { height: 58px; }
+  .logo .important { font-size: 16px; }
+}
+
+/* Very small screens: stack nav vertically */
+@media (max-width: 420px) {
+  .menu {
+    flex-direction: column;
+    gap: 10px;
+    align-items: stretch;
+    padding: 12px;
+  }
+
+  .menu-item {
+    width: 100%;
+    text-align: center;
+    border-radius: 8px;
+  }
+}
+
+/* Utility classes you can use in children components */
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bold { font-weight: 700; }
+.small { font-size: 13px; color: #6b7280; }
+
+/* Accessibility: focus outline for keyboard users */
+.menu-item:focus,
+.dropdown-content a:focus {
+  outline: 3px solid rgba(9,48,74,0.12);
+  outline-offset: 3px;
+  border-radius: 8px;
 }

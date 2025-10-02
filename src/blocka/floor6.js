@@ -1,85 +1,106 @@
 import React from "react";
-import minstImage from "../assets/minst.png";
-import doorImage from "../assets/door.png";
-import mtrImage from "../assets/mtr.png";
 
 function Floorb6() {
-  // Styles as objects
+  // Styles
   const containerStyle = {
-    padding: "20px",
+    padding: "40px 20px",
+    fontFamily: "Arial, sans-serif",
+    background: "linear-gradient(180deg,#f9fcff,#eef7fb)",
+    borderRadius: "12px",
+    boxShadow: "0 6px 24px rgba(0,0,0,0.08)",
+    maxWidth: "900px",
+    margin: "20px auto",
     textAlign: "center",
-    fontFamily: "Arial, sans-serif"
   };
 
-  const h2Style = {
-    color: "#333",
-    marginBottom: "5px"
+  const titleStyle = {
+    fontSize: "28px",
+    fontWeight: "700",
+    color: "#0b3556",
+    marginBottom: "10px",
   };
 
-
-  const pStyle = {
-    color: "#666",
-    marginBottom: "15px"
+  const descStyle = {
+    fontSize: "16px",
+    color: "#555",
+    marginBottom: "30px",
+    lineHeight: "1.6",
   };
 
   const listStyle = {
-    textAlign: "left",
-    display: "inline-block",
-    marginBottom: "30px"
+    listStyle: "none",
+    padding: 0,
+    margin: "0 auto 40px",
+    display: "grid",
+    gridTemplateColumns: "repeat(auto-fit,minmax(220px,1fr))",
+    gap: "16px",
+    maxWidth: "600px",
+  };
+
+  const listItemStyle = {
+    background: "#fff",
+    padding: "16px",
+    borderRadius: "10px",
+    boxShadow: "0 4px 12px rgba(0,0,0,0.06)",
+    fontWeight: "600",
+    color: "#0b3556",
+  };
+
+  const sectionTitle = {
+    fontSize: "22px",
+    fontWeight: "700",
+    marginBottom: "20px",
+    color: "#0b3556",
   };
 
   const galleryStyle = {
     display: "flex",
     justifyContent: "center",
     gap: "20px",
-    flexWrap: "wrap"
+    flexWrap: "wrap",
   };
 
   const galleryItemStyle = {
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "center"
-  };
-
-  const imgStyle = {
     width: "200px",
-    height: "200px",
-    objectFit: "cover",
-    borderRadius: "8px",
-    boxShadow: "0 3px 6px rgba(0,0,0,0.15)",
-    marginBottom: "8px"
+    textAlign: "center",
+    background: "#fff",
+    padding: "14px",
+    borderRadius: "10px",
+    boxShadow: "0 3px 10px rgba(0,0,0,0.05)",
   };
 
   const captionStyle = {
-    fontWeight: "bold",
-    color: "#333"
+    fontWeight: "600",
+    color: "#0b3556",
+    marginTop: "8px",
   };
 
   return (
     <div style={containerStyle}>
-      <h2 style={h2Style}>Welcome to Build A- Floor 6</h2>
-      <p style={pStyle}>Minister office</p>
+      <h2 style={titleStyle}>Build A – Floor 6</h2>
+      <p style={descStyle}>
+        This floor is dedicated to the <strong>Minister's Office</strong> and key advisory staff, ensuring executive operations.
+      </p>
 
+      {/* Services / Office Features */}
+      <h3 style={sectionTitle}>Office Features</h3>
       <ul style={listStyle}>
-        <li>Minister office</li>
-        <li>minister</li>
-        <li>ministry of revenues minister office</li>
-        
+        <li style={listItemStyle}>🏛 Minister Office</li>
+        <li style={listItemStyle}>👤 Minister & Advisors</li>
+        <li style={listItemStyle}>📂 Ministry of Revenue Executive Office</li>
       </ul>
-<h1>Ministry Of Minister</h1>
-      {/* Gallery */}
+
+      {/* Representatives / Gallery */}
+      <h3 style={sectionTitle}>Representative Persons</h3>
       <div style={galleryStyle}>
         <div style={galleryItemStyle}>
-          <img src={mtrImage} alt="mtr" style={imgStyle} />
           <p style={captionStyle}>Minister Aynalem</p>
         </div>
         <div style={galleryItemStyle}>
-          <img src={doorImage} alt="door" style={imgStyle} />
-          <p style={captionStyle}>MOR img</p>
+          <p style={captionStyle}>Executive Office</p>
         </div>
         <div style={galleryItemStyle}>
-          <img src={minstImage} alt="minst" style={imgStyle} />
-          <p style={captionStyle}>Minister Aynalem</p>
+          <p style={captionStyle}>Senior Advisor</p>
         </div>
       </div>
     </div>

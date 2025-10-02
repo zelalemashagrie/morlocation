@@ -1,77 +1,97 @@
 import React from "react";
-import zdImage from "../assets/zd.png";
-import zddImage from "../assets/zdd.png";
-import morImage from "../assets/mor.png";
 
 function Floorb2() {
-  // Styles as objects
+  // Styles
   const containerStyle = {
-    padding: "20px",
+    padding: "40px 20px",
+    fontFamily: "Arial, sans-serif",
+    background: "linear-gradient(180deg,#f9fcff,#eef7fb)",
+    borderRadius: "12px",
+    boxShadow: "0 6px 24px rgba(0,0,0,0.08)",
+    maxWidth: "900px",
+    margin: "20px auto",
     textAlign: "center",
-    fontFamily: "Arial, sans-serif"
   };
 
-  const h2Style = {
-    color: "#333",
-    marginBottom: "5px"
+  const titleStyle = {
+    fontSize: "28px",
+    fontWeight: "700",
+    color: "#0b3556",
+    marginBottom: "10px",
   };
 
-  const h3Style = {
+  const descStyle = {
+    fontSize: "16px",
     color: "#555",
-    marginBottom: "15px"
-  };
-
-  const pStyle = {
-    color: "#666",
-    marginBottom: "15px"
+    marginBottom: "30px",
+    lineHeight: "1.6",
   };
 
   const listStyle = {
-    textAlign: "left",
-    display: "inline-block",
-    marginBottom: "30px"
+    listStyle: "none",
+    padding: 0,
+    margin: "0 auto 40px",
+    display: "grid",
+    gridTemplateColumns: "repeat(auto-fit,minmax(220px,1fr))",
+    gap: "16px",
+    maxWidth: "600px",
   };
 
-  const galleryStyle = {
+  const listItemStyle = {
+    background: "#fff",
+    padding: "16px",
+    borderRadius: "10px",
+    boxShadow: "0 4px 12px rgba(0,0,0,0.06)",
+    fontWeight: "600",
+    color: "#0b3556",
+  };
+
+  const sectionTitle = {
+    fontSize: "22px",
+    fontWeight: "700",
+    marginBottom: "20px",
+    color: "#0b3556",
+  };
+
+  const repListStyle = {
     display: "flex",
     justifyContent: "center",
     gap: "20px",
-    flexWrap: "wrap"
+    flexWrap: "wrap",
   };
 
-  const galleryItemStyle = {
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "center"
-  };
-
-  const imgStyle = {
-    width: "200px",
-    height: "200px",
-    objectFit: "cover",
+  const repItemStyle = {
+    background: "#fff",
+    padding: "14px 20px",
     borderRadius: "8px",
-    boxShadow: "0 3px 6px rgba(0,0,0,0.15)",
-    marginBottom: "8px"
-  };
-
-  const captionStyle = {
-    fontWeight: "bold",
-    color: "#333"
+    boxShadow: "0 3px 8px rgba(0,0,0,0.05)",
+    fontWeight: "600",
+    color: "#333",
+    minWidth: "180px",
   };
 
   return (
     <div style={containerStyle}>
-      <h2 style={h2Style}>Build A- Floor2</h2>
-      <h3 style={h3Style}>Welcome </h3>
-      <p style={pStyle}>unknown</p>
-
+      <h2 style={titleStyle}>Build A – Floor 2</h2>
+      <p style={descStyle}>
+        This floor's details are currently under development. More information will be provided soon.
+      </p>
+ {/* Services */}
+      <h3 style={sectionTitle}>Our Services</h3>
+      {/* Features */}
       <ul style={listStyle}>
-        <li>1.</li>
-        <li>2.</li>
-        <li>3.</li>
-        
+        <li style={listItemStyle}>🔹 Feature 1</li>
+        <li style={listItemStyle}>🔹 Feature 2</li>
+        <li style={listItemStyle}>🔹 Feature 3</li>
+         <li style={listItemStyle}>🔹 Feature 3</li>
       </ul>
-<h1>Representative Person </h1>
+
+      {/* Representatives */}
+      <h3 style={sectionTitle}>Representative Persons</h3>
+      <div style={repListStyle}>
+        <div style={repItemStyle}>👤 Representative 1</div>
+        <div style={repItemStyle}>👤 Representative 2</div>
+      </div>
     </div>
   );
 }

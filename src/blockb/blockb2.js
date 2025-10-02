@@ -4,262 +4,146 @@ import zddImage from "../assets/zdd.png";
 import morImage from "../assets/mor.png";
 
 function Floorb2() {
-  // Gallery styles
+  const containerStyle = {
+    padding: "40px 20px",
+    fontFamily: "Arial, sans-serif",
+    maxWidth: "1000px",
+    margin: "20px auto",
+    background: "linear-gradient(180deg,#f9fcff,#eef7fb)",
+    borderRadius: "12px",
+    boxShadow: "0 6px 24px rgba(0,0,0,0.08)",
+    textAlign: "center",
+  };
+
+  const titleStyle = {
+    fontSize: "28px",
+    fontWeight: "700",
+    color: "#1064f6",
+    marginBottom: "15px",
+  };
+
+  const sectionTitle = {
+    fontSize: "22px",
+    fontWeight: "700",
+    color: "#0b3556",
+    marginTop: "30px",
+    marginBottom: "16px",
+  };
+
+  const cardStyle = {
+    padding: "12px 16px",
+    borderRadius: "10px",
+    border: "2px solid #1064f6",
+    background: "#eaf2ff",
+    fontWeight: "600",
+    marginBottom: "15px",
+  };
+
+  const listStyle = {
+    listStyle: "none",
+    padding: 0,
+    maxWidth: "500px",
+    margin: "0 auto 30px",
+    textAlign: "left",
+  };
+
+  const listItemStyle = {
+    background: "#fff",
+    padding: "10px 14px",
+    borderRadius: "8px",
+    border: "1px dashed #1064f6",
+    marginBottom: "10px",
+    fontWeight: "600",
+    color: "#0b3556",
+  };
+
   const galleryStyle = {
     display: "flex",
     justifyContent: "center",
     gap: "20px",
-    marginTop: "20px",
     flexWrap: "wrap",
+    marginTop: "30px",
   };
 
-  const galleryItemStyle = {
-    textAlign: "center",
-  };
-
-  // ✅ Equal height and width for all 3 images
   const imgStyle = {
     width: "200px",
     height: "200px",
     objectFit: "cover",
-    borderRadius: "8px",
-    boxShadow: "0 2px 6px rgba(0,0,0,0.2)",
+    borderRadius: "12px",
+    boxShadow: "0 4px 12px rgba(0,0,0,0.12)",
   };
 
   const captionStyle = {
     marginTop: "8px",
-    fontWeight: "bold",
+    fontWeight: "600",
     color: "#333",
   };
 
   return (
-    <div style={{ padding: "20px", fontFamily: "Arial, sans-serif" }}>
-      {/* Header */}
-      <h2 style={{ textAlign: "center", color: "#1064f6" }}>
-        Welcome to Build B - Floor 2
-      </h2>
+    <div style={containerStyle}>
+      <h2 style={titleStyle}>Welcome to Build B - Floor 2</h2>
 
-      <div style={{ display: "flex", justifyContent: "center" }}>
-        <div style={{ textAlign: "center" }}>
-          {/* Top Node */}
-          <div
-            style={{
-              padding: "10px 20px",
-              border: "2px solid #1064f6",
-              borderRadius: "6px",
-              fontWeight: "bold",
-              background: "#eaf2ff",
-              marginBottom: "20px",
-            }}
-          >
-            ኢ-ዳታ ዘርፍ አስተዳደር ሚኒስቴር ዴኤታ <br />
-            e-Data Sector
+      <div style={cardStyle}>
+        ኢ-ዳታ ዘርፍ አስተዳደር ሚኒስቴር ዴኤታ <br />
+        e-Data Sector
+      </div>
+
+      <div style={cardStyle}>
+        የመረጃ ቴክኖሎጅ ማዕከል <br />
+        Information Technology Center
+      </div>
+
+      <h2 style={sectionTitle}>Directors & Teams</h2>
+
+      <div style={{ display: "flex", justifyContent: "center", gap: "40px", flexWrap: "wrap" }}>
+        <div>
+          <div style={cardStyle}>
+            የመረጃ ቴክኖሎጅ ልማትና አስተዳደር ዳ/ት <br />
+            Director of IT Development & Management
           </div>
-
-          <div
-            style={{
-              padding: "10px 20px",
-              border: "2px solid #1064f6",
-              borderRadius: "6px",
-              fontWeight: "bold",
-              background: "#eaf2ff",
-              marginBottom: "30px",
-            }}
-          >
-              የመረጃ ቴክኖሎጅ ማዕከል<br />
-            Information Technology Center
-          </div>
-
-          {/* Directors */}
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "center",
-              gap: "60px",
-              marginBottom: "30px",
-              flexWrap: "wrap",
-            }}
-          >
-            {/* Administrator Director */}
-            <div style={{ textAlign: "center" }}>
-              <div
-                style={{
-                  padding: "10px 15px",
-                  border: "2px solid #333",
-                  borderRadius: "6px",
-                  background: "#f9f9f9",
-                  fontWeight: "bold",
-                  marginBottom: "15px",
-                }}
-              >
-                የመረጃ ቴክኖሎጅ  ልማትና አስተዳደር ዳ/ት<br />
-               Director of Information Technology Development and Management
-              </div>
-
-              {/* Teams */}
-              <div
-                style={{
-                  display: "flex",
-                  flexDirection: "column",
-                  gap: "10px",
-                }}
-              >
-                {["Database Team", "Business Team", "Application Team", "Software Team"].map(
-                  (team) => (
-                    <div
-                      key={team}
-                      style={{
-                        padding: "8px 12px",
-                        border: "1px dashed #1064f6",
-                        borderRadius: "6px",
-                        background: "#fff",
-                      }}
-                    >
-                      {team}
-                    </div>
-                  )
-                )}
-              </div>
-            </div>
-
-            {/* Basic Development Director */}
-             {/* Administrator Director */}
-            <div style={{ textAlign: "center" }}>
-              <div
-                style={{
-                  padding: "10px 15px",
-                  border: "2px solid #333",
-                  borderRadius: "6px",
-                  background: "#f9f9f9",
-                  fontWeight: "bold",
-                  marginBottom: "15px",
-                }}
-              >
-                የመረጃ ቴክኖሎጅ መሰረተ ልማትና አስተዳደር ዳ/ት<br />
-               Director of Information Basic
-              </div>
-             
-             
-
-             
-              <div
-                style={{
-                  display: "flex",
-                  flexDirection: "column",
-                  gap: "10px",
-                }}
-              >
-                {["Security Team", "Network Team", "Data Center Team", "IT Support Team"].map(
-                  (team) => (
-                    <div
-                      key={team}
-                      style={{
-                        padding: "8px 12px",
-                        border: "1px dashed #1064f6",
-                        borderRadius: "6px",
-                        background: "#fff",
-                      }}
-                    >
-                      {team}
-                    </div>
-                    
-                  )
-                )}
-                
-              </div>
-            </div>
-          </div>
-          
-
-
-           <div style={{ textAlign: "center" }}>
-              <div
-                style={{
-                  padding: "10px 15px",
-                  border: "2px solid #333",
-                  borderRadius: "6px",
-                  background: "#f9f9f9",
-                  fontWeight: "bold",
-                  marginBottom: "15px",
-                }}
-              >
-               <h3> የምንሰጣችዉ  አገልግሎቶች ህንጻ ለ 5ተኛ </h3>
-                  API Integration <br/>
-                  TIN Number integration with National ID<br/>
-                  e-envoice System Test<br/>
-                  Wibsite Developer<br/>
-                  Mobile APP Developer
-              </div>
-               </div>
-               {/* Administrator Director */}
-            <div style={{ textAlign: "center" }}>
-              <div
-                style={{
-                  padding: "10px 15px",
-                  border: "2px solid #333",
-                  borderRadius: "6px",
-                  background: "#e2d3d3ff",
-                  fontWeight: "bold",
-                  marginBottom: "15px",
-                }}
-              >
-               <h3> Our services On Build B Floor4   </h3>
-          
-              </div>
-        <ul style={{ listStyleType: "none",backgroundColor:"#aeb7c7ff", padding: 0, marginTop: "20px", textAlign: "center" }}>
-  <li style={{ fontWeight: "bold", color: "#1064f6", margin: "10px 0" }}>API Integration</li>
-  <li style={{ fontWeight: "bold", color: "#1064f6", margin: "10px 0" }}>
-    TIN Number integration with National ID
-  </li>
-  <li style={{ fontWeight: "bold", color: "#1064f6", margin: "10px 0" }}>E-Invoice System Test</li>
-  <li style={{ fontWeight: "bold", color: "#1064f6", margin: "10px 0" }}>Website Developer</li>
-  <li style={{ fontWeight: "bold", color: "#1064f6", margin: "10px 0" }}>Mobile App Developer</li>
-</ul>
-
-              {/* Teams */}
-              <div
-                style={{
-                  display: "flex",
-                  flexDirection: "column",
-                  gap: "10px",
-                }}
-              >
-                {["API Integration", "TIN Number integration with National ID", "e-envoice System Test", "Wibsite Developer", "Mobile APP Developer"].map(
-                  (team) => (
-                    <div
-                      key={team}
-                      style={{
-                        padding: "8px 12px",
-                        border: "1px dashed #1064f6",
-                        borderRadius: "6px",
-                        background: "#fff",
-                      }}
-                    >
-                      {team}
-                    </div>
-                  )
-                )}
-              </div>
-            </div>
-          {/* Representative persons */}
-          <h2 style={{ marginTop: "90px", color: "#1064f6" }}>
-            Representative Persons
-          </h2>
-          <div style={galleryStyle}>
-            <div style={galleryItemStyle}>
-              <img src={zdImage} alt="ZD" style={imgStyle} />
-              <p style={captionStyle}>Dawit Wibeshet</p>
-            </div>
-            <div style={galleryItemStyle}>
-              <img src={zddImage} alt="ZDD" style={imgStyle} />
-              <p style={captionStyle}>Kililu Tamene</p>
-            </div>
-            <div style={galleryItemStyle}>
-              <img src={morImage} alt="MOR" style={imgStyle} />
-              <p style={captionStyle}>Kuratu Lemma</p>
-            </div>
-          </div>
+          <ul style={listStyle}>
+            {["Database Team", "Business Team", "Application Team", "Software Team"].map(team => (
+              <li key={team} style={listItemStyle}>{team}</li>
+            ))}
+          </ul>
         </div>
+
+        <div>
+          <div style={cardStyle}>
+            የመረጃ ቴክኖሎጅ መሰረተ ልማትና አስተዳደር ዳ/ት <br />
+            Director of IT Basic & Operations
+          </div>
+          <ul style={listStyle}>
+            {["Security Team", "Network Team", "Data Center Team", "IT Support Team"].map(team => (
+              <li key={team} style={listItemStyle}>{team}</li>
+            ))}
+          </ul>
+        </div>
+      </div>
+
+      <h2 style={sectionTitle}>Our Services</h2>
+      <ul style={listStyle}>
+        {[
+          "API Integration",
+          "TIN Number integration with National ID",
+          "E-Invoice System Test",
+          "Website Developer",
+          "Mobile App Developer",
+        ].map(service => (
+          <li key={service} style={listItemStyle}>{service}</li>
+        ))}
+      </ul>
+
+      <h2 style={sectionTitle}>Representative Persons</h2>
+      <div style={galleryStyle}>
+        {[{ img: zdImage, name: "Dawit Wibeshet" },
+          { img: zddImage, name: "Kililu Tamene" },
+          { img: morImage, name: "Kuratu Lemma" }].map(person => (
+          <div key={person.name} style={{ textAlign: "center" }}>
+            <img src={person.img} alt={person.name} style={imgStyle} />
+            <p style={captionStyle}>{person.name}</p>
+          </div>
+        ))}
       </div>
     </div>
   );

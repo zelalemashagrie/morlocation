@@ -43,7 +43,8 @@ function Footer() {
             <li><Link to="/buildC/floorc3" style={linkStyle}>Cash Regster Machine</Link></li>
             <li><Link to="/buildD/floord4" style={linkStyle}>Human Resource Manag</Link></li>
              <li><Link to="/buildB/floorb4" style={linkStyle}>information Technology</Link></li>
-             <li><Link to="/buildB/floorb5" style={linkStyle}>Singl Window</Link></li>
+             <li><Link to="/buildB/floorb5" style={linkStyle}>Singl Window
+             </Link></li>
           </ul>
         </div>
 

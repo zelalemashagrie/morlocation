@@ -50,42 +50,57 @@ function App() {
       <div className="container">
         {/* Logo Section */}
         <div className="logo">
-          
-          <h3>  <img src={morImage} alt="MOR Logo" />
-            <p>Work Time🕒 Mon-Fri: 2:00 PM – 11:00 PM ---- 🕒 Sat: 2:00 PM – 6:00 PM</p>
+          <h3> 
+            <img src={morImage} alt="MOR Logo" />
+
+ <h2 style={{ color: "#1091f3ff" }}>
+          <button
+            onClick={() => (window.location.href = "http://localhost:3001/")}
+            style={{
+              padding: "3px 50px",
+              fontSize: "20px",
+              margin: "10px",
+              color: "#fff",
+              backgroundColor: "#44b0f3ff",
+              border: "none",
+              borderRadius: "5px",
+              cursor: "pointer"
+            }}
+          >
+            <p>Welcome to MOR▼</p>
+          </button>
+          Welcome to Ministry Of Revenue Head Quarter Office
+        </h2>
+
+            <p>Work Time 🕒 Mon-Fri: 2:00 PM – 11:00 PM ---- 🕒 Sat: 2:00 PM – 6:00 PM</p>
           </h3>
-         
-          <p style={{ textAlign: "center", fontWeight: "bold", color: "red", fontSize: "18px" }}>
-  Where do you want to go?
-</p>
-      <p style={{ textAlign: "center", fontWeight: "bold", color: "red", fontSize: "18px" }}>
-       <h3 style={{ textAlign: "center", fontWeight: "bold", color: "red", fontSize: "18px" }}>
-  
-የት መሄድ ትፈልጋለህ?
-</h3>
-</p>
-በግንባታ ላይ ያሉትን ሁሉንም ለማየት እባክዎን ጠቅ ያድርጉ?<br/>
-Please click to see all under build works.
+
+            <h2 style={{color:"red"}}>Where do you want to go?</h2>
+          <h1 style={{color:"red"}}>የት መሄድ ትፈልጋለህ?</h1>
+        
+          በግንባታ ላይ ያሉትን ሁሉንም ለማየት እባክዎን ጠቅ ያድርጉ?<br/>
+          Please click to see all under build works.
         </div>
 
         {/* Navigation Menu */}
         <nav className="menu">
+
           {/* Build A */}
           <div
             className="dropdown"
             onMouseEnter={() => setOpenDropdownA(true)}
             onMouseLeave={() => setOpenDropdownA(false)}
           >
-            <Link to="#" className="menu-item">Build A ▼</Link>
+            <Link to="#" className="menu-item">🏢BLOCK A▼</Link>
             {openDropdownA && (
               <div className="dropdown-content">
-                <Link to="/buildA/floor0">Floor 0</Link>
-                <Link to="/buildA/floor1">Floor 1</Link>
-                <Link to="/buildA/floor2">Floor 2</Link>
-                <Link to="/buildA/floor3">Floor 3</Link>
-                <Link to="/buildA/floor4">Floor 4</Link>
-                <Link to="/buildA/floor5">Floor 5</Link>
-                <Link to="/buildA/floor6">Floor 6</Link>
+                <Link to="/buildA/floor0" onClick={() => setOpenDropdownA(false)}>Floor 0</Link>
+                <Link to="/buildA/floor1" onClick={() => setOpenDropdownA(false)}>Floor 1</Link>
+                <Link to="/buildA/floor2" onClick={() => setOpenDropdownA(false)}>Floor 2</Link>
+                <Link to="/buildA/floor3" onClick={() => setOpenDropdownA(false)}>Floor 3</Link>
+                <Link to="/buildA/floor4" onClick={() => setOpenDropdownA(false)}>Floor 4</Link>
+                <Link to="/buildA/floor5" onClick={() => setOpenDropdownA(false)}>Floor 5</Link>
+                <Link to="/buildA/floor6" onClick={() => setOpenDropdownA(false)}>Floor 6</Link>
               </div>
             )}
           </div>
@@ -96,16 +111,16 @@ Please click to see all under build works.
             onMouseEnter={() => setOpenDropdownB(true)}
             onMouseLeave={() => setOpenDropdownB(false)}
           >
-            <Link to="#" className="menu-item">Build B ▼</Link>
+            <Link to="#" className="menu-item">🏢BLOCK B▼</Link>
             {openDropdownB && (
               <div className="dropdown-content">
-                <Link to="/buildB/floorb0">Floor 0</Link>
-                <Link to="/buildB/floorb1">Floor 1</Link>
-                <Link to="/buildB/floorb2">Floor 2</Link>
-                <Link to="/buildB/floorb3">Floor 3</Link>
-                <Link to="/buildB/floorb4">Floor 4</Link>
-                <Link to="/buildB/floorb5">Floor 5</Link>
-                <Link to="/buildB/floorb6">Floor 6</Link>
+                <Link to="/buildB/floorb0" onClick={() => setOpenDropdownB(false)}>Floor 0</Link>
+                <Link to="/buildB/floorb1" onClick={() => setOpenDropdownB(false)}>Floor 1</Link>
+                <Link to="/buildB/floorb2" onClick={() => setOpenDropdownB(false)}>Floor 2</Link>
+                <Link to="/buildB/floorb3" onClick={() => setOpenDropdownB(false)}>Floor 3</Link>
+                <Link to="/buildB/floorb4" onClick={() => setOpenDropdownB(false)}>Floor 4</Link>
+                <Link to="/buildB/floorb5" onClick={() => setOpenDropdownB(false)}>Floor 5</Link>
+                <Link to="/buildB/floorb6" onClick={() => setOpenDropdownB(false)}>Floor 6</Link>
               </div>
             )}
           </div>
@@ -116,16 +131,16 @@ Please click to see all under build works.
             onMouseEnter={() => setOpenDropdownC(true)}
             onMouseLeave={() => setOpenDropdownC(false)}
           >
-            <Link to="#" className="menu-item">Build C ▼</Link>
+            <Link to="#" className="menu-item">🏢BLOCK C▼</Link>
             {openDropdownC && (
               <div className="dropdown-content">
-                <Link to="/buildC/floorc0">Floor 0</Link>
-                <Link to="/buildC/floorc1">Floor 1</Link>
-                <Link to="/buildC/floorc2">Floor 2</Link>
-                <Link to="/buildC/floorc3">Floor 3</Link>
-                <Link to="/buildC/floorc4">Floor 4</Link>
-                <Link to="/buildC/floorc5">Floor 5</Link>
-                <Link to="/buildC/floorc6">Floor 6</Link>
+                <Link to="/buildC/floorc0" onClick={() => setOpenDropdownC(false)}>Floor 0</Link>
+                <Link to="/buildC/floorc1" onClick={() => setOpenDropdownC(false)}>Floor 1</Link>
+                <Link to="/buildC/floorc2" onClick={() => setOpenDropdownC(false)}>Floor 2</Link>
+                <Link to="/buildC/floorc3" onClick={() => setOpenDropdownC(false)}>Floor 3</Link>
+                <Link to="/buildC/floorc4" onClick={() => setOpenDropdownC(false)}>Floor 4</Link>
+                <Link to="/buildC/floorc5" onClick={() => setOpenDropdownC(false)}>Floor 5</Link>
+                <Link to="/buildC/floorc6" onClick={() => setOpenDropdownC(false)}>Floor 6</Link>
               </div>
             )}
           </div>
@@ -136,16 +151,16 @@ Please click to see all under build works.
             onMouseEnter={() => setOpenDropdownD(true)}
             onMouseLeave={() => setOpenDropdownD(false)}
           >
-            <Link to="#" className="menu-item">Build D ▼</Link>
+            <Link to="#" className="menu-item">🏢BLOCK D▼</Link>
             {openDropdownD && (
               <div className="dropdown-content">
-                <Link to="/buildD/floord0">Floor 0</Link>
-                <Link to="/buildD/floord1">Floor 1</Link>
-                <Link to="/buildD/floord2">Floor 2</Link>
-                <Link to="/buildD/floord3">Floor 3</Link>
-                <Link to="/buildD/floord4">Floor 4</Link>
-                <Link to="/buildD/floord5">Floor 5</Link>
-                <Link to="/buildD/floord6">Floor 6</Link>
+                <Link to="/buildD/floord0" onClick={() => setOpenDropdownD(false)}>Floor 0</Link>
+                <Link to="/buildD/floord1" onClick={() => setOpenDropdownD(false)}>Floor 1</Link>
+                <Link to="/buildD/floord2" onClick={() => setOpenDropdownD(false)}>Floor 2</Link>
+                <Link to="/buildD/floord3" onClick={() => setOpenDropdownD(false)}>Floor 3</Link>
+                <Link to="/buildD/floord4" onClick={() => setOpenDropdownD(false)}>Floor 4</Link>
+                <Link to="/buildD/floord5" onClick={() => setOpenDropdownD(false)}>Floor 5</Link>
+                <Link to="/buildD/floord6" onClick={() => setOpenDropdownD(false)}>Floor 6</Link>
               </div>
             )}
           </div>
@@ -153,9 +168,10 @@ Please click to see all under build works.
 
         {/* Routes */}
         <Routes>
-           {/* Home Page */}
-  <Route path="/" element={<Home />} />
-   <Route path="/mission" element={<Mission />} />
+          {/* Home Page */}
+          <Route path="/" element={<Home />} />
+          <Route path="/mission" element={<Mission />} />
+
           {/* Build A */}
           <Route path="/buildA/floor0" element={<Floor0 />} />
           <Route path="/buildA/floor1" element={<Floor1 />} />
@@ -164,6 +180,7 @@ Please click to see all under build works.
           <Route path="/buildA/floor4" element={<Floor4 />} />
           <Route path="/buildA/floor5" element={<Floor5 />} />
           <Route path="/buildA/floor6" element={<Floor6 />} />
+
           {/* Build B */}
           <Route path="/buildB/floorb0" element={<Floorb0 />} />
           <Route path="/buildB/floorb1" element={<Floorb1 />} />
@@ -172,6 +189,7 @@ Please click to see all under build works.
           <Route path="/buildB/floorb4" element={<Floorb4 />} />
           <Route path="/buildB/floorb5" element={<Floorb5 />} />
           <Route path="/buildB/floorb6" element={<Floorb6 />} />
+
           {/* Build C */}
           <Route path="/buildC/floorc0" element={<Floorc0 />} />
           <Route path="/buildC/floorc1" element={<Floorc1 />} />
@@ -180,6 +198,7 @@ Please click to see all under build works.
           <Route path="/buildC/floorc4" element={<Floorc4 />} />
           <Route path="/buildC/floorc5" element={<Floorc5 />} />
           <Route path="/buildC/floorc6" element={<Floorc6 />} />
+
           {/* Build D */}
           <Route path="/buildD/floord0" element={<Floord0 />} />
           <Route path="/buildD/floord1" element={<Floord1 />} />
@@ -189,7 +208,8 @@ Please click to see all under build works.
           <Route path="/buildD/floord5" element={<Floord5 />} />
           <Route path="/buildD/floord6" element={<Floord6 />} />
         </Routes>
-         <Footer/>
+
+        <Footer />
       </div>
     </Router>
   );

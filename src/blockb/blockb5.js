@@ -5,7 +5,7 @@ import morImage from "../assets/mor.png";
 
 function Floorb5() {
   const container = {
-    padding: "40px",
+    padding: "40px 20px",
     fontFamily: "Arial, sans-serif",
     background: "#f4f7fb",
     minHeight: "100vh",
@@ -13,34 +13,34 @@ function Floorb5() {
 
   const header = {
     textAlign: "center",
-    background: "hsla(191, 57%, 95%, 1.00)",
-    color: "#1810f8ff",
+    background: "hsla(191, 57%, 95%, 1)",
+    color: "#1064f6",
     padding: "20px",
-    borderRadius: "10px",
+    borderRadius: "12px",
     marginBottom: "40px",
-    boxShadow: "0 4px 10px rgba(0,0,0,0.2)",
+    boxShadow: "0 4px 10px rgba(0,0,0,0.15)",
   };
 
   const section = {
     background: "#fff",
-    padding: "20px",
-    borderRadius: "10px",
+    padding: "25px 20px",
+    borderRadius: "12px",
     marginBottom: "30px",
-    boxShadow: "0 2px 6px rgba(0,0,0,0.15)",
+    boxShadow: "0 3px 8px rgba(0,0,0,0.1)",
   };
 
   const serviceList = {
     display: "flex",
     flexDirection: "column",
     gap: "15px",
-    marginTop: "20px",
     alignItems: "center",
+    marginTop: "20px",
   };
 
   const serviceItem = {
     background: "#eaf2ff",
     padding: "15px 20px",
-    borderRadius: "8px",
+    borderRadius: "10px",
     textAlign: "center",
     fontWeight: "bold",
     color: "#1064f6",
@@ -60,7 +60,7 @@ function Floorb5() {
   const imgStyle = {
     width: "100%",
     height: "220px",
-    objectFit: "contain", // ensures full image visible
+    objectFit: "contain",
     borderRadius: "12px",
     boxShadow: "0 3px 8px rgba(0,0,0,0.2)",
     backgroundColor: "#f4f7fb",
@@ -73,51 +73,50 @@ function Floorb5() {
     fontSize: "16px",
   };
 
+  const representatives = [
+    { img: zdImage, name: "Dawit Wibeshet", role: "e-Data Sector" },
+    { img: zddImage, name: "Kililu Tamene", role: "Information Technology Center" },
+    { img: morImage, name: "Kuratu Lemma", role: "IT Development & Management" },
+  ];
+
+  const services = [
+    "Internal employer IT support",
+    "Printer connect to desktop",
+    "Internet connect on desktop",
+    "Give internet connection",
+    "Evaluating PC desktop",
+  ];
+
   return (
     <div style={container}>
       {/* Header */}
       <div style={header}>
         <h1>🏢 Build B - Floor 5</h1>
-        <h1> እንኳን በደህና መጡ ወደ መረጃ ቴክኖሎጅ መሠረተ ልማት አስተዳደር ዳ/ት</h1>
+        <h2>እንኳን በደህና መጡ ወደ መረጃ ቴክኖሎጅ መሠረተ ልማት አስተዳደር ዳ/ት</h2>
       </div>
 
       {/* Services */}
       <div style={section}>
         <h2 style={{ color: "#1064f6", marginBottom: "15px" }}>Our Services</h2>
         <div style={serviceList}>
-  <div style={serviceItem}>Internal employer IT support</div>
-  <div style={serviceItem}>Printer connect to desktop</div>
-  <div style={serviceItem}>Internet connect on desktop</div>
-  <div style={serviceItem}>Give internet connection</div>
-  <div style={serviceItem}>Evaluating PC desktop</div>
-</div>
-
+          {services.map((service) => (
+            <div key={service} style={serviceItem}>{service}</div>
+          ))}
+        </div>
       </div>
 
-      {/* Representative Persons */}
+      {/* Representatives */}
       <div style={section}>
-        <h2 style={{ color: "#1064f6", marginBottom: "0px" }}>
-          Representative Persons
-        </h2>
+        <h2 style={{ color: "#1064f6", marginBottom: "20px" }}>Representative Persons</h2>
         <div style={gallery}>
-          <div style={{ textAlign: "center" }}>
-            <img src={zdImage} alt="ZD" style={imgStyle} />
-            <p style={caption}>
-              ኢ-ዳታ ዘርፍ አስተዳደር <br /> Dawit Wibeshet
-            </p>
-          </div>
-          <div style={{ textAlign: "center" }}>
-            <img src={zddImage} alt="ZDD" style={imgStyle} />
-            <p style={caption}>
-              ቴክኖሎጅ ማዕከል አስተዳደር <br /> Kililu Tamene
-            </p>
-          </div>
-          <div style={{ textAlign: "center" }}>
-            <img src={morImage} alt="MOR" style={imgStyle} />
-            <p style={caption}>
-              ቴክኖሎጅ ልማትና አስተዳደር <br /> Kuratu Lemma
-            </p>
-          </div>
+          {representatives.map((rep) => (
+            <div key={rep.name} style={{ textAlign: "center" }}>
+              <img src={rep.img} alt={rep.name} style={imgStyle} />
+              <p style={caption}>
+                {rep.role} <br /> {rep.name}
+              </p>
+            </div>
+          ))}
         </div>
       </div>
     </div>

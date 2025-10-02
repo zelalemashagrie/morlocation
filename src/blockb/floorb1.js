@@ -1,93 +1,76 @@
 import React from "react";
-import zdImage from "../assets/zd.png";
-import zddImage from "../assets/zdd.png";
-import morImage from "../assets/mor.png";
 
 function Floorb1() {
-  // Styles as objects
+  // Container styles
   const containerStyle = {
-    padding: "20px",
+    padding: "40px 20px",
+    fontFamily: "Arial, sans-serif",
+    background: "linear-gradient(180deg,#f9fcff,#eef7fb)",
+    borderRadius: "12px",
+    boxShadow: "0 6px 24px rgba(0,0,0,0.08)",
+    maxWidth: "900px",
+    margin: "20px auto",
     textAlign: "center",
-    fontFamily: "Arial, sans-serif"
   };
 
-  const h2Style = {
-    color: "#333",
-    marginBottom: "5px"
+  const titleStyle = {
+    fontSize: "28px",
+    fontWeight: "700",
+    color: "#0b3556",
+    marginBottom: "10px",
   };
 
-  const h3Style = {
-    color: "#555",
-    marginBottom: "15px"
+  const subTitleStyle = {
+    fontSize: "20px",
+    fontWeight: "600",
+    color: "#444",
+    marginBottom: "20px",
   };
 
-  const pStyle = {
-    color: "#666",
-    marginBottom: "15px"
+  const sectionTitle = {
+    fontSize: "22px",
+    fontWeight: "700",
+    color: "#0b3556",
+    marginTop: "30px",
+    marginBottom: "16px",
   };
 
   const listStyle = {
+    listStyle: "none",
+    padding: 0,
+    margin: "0 auto 40px",
+    maxWidth: "400px",
     textAlign: "left",
-    display: "inline-block",
-    marginBottom: "30px"
   };
 
-  const galleryStyle = {
-    display: "flex",
-    justifyContent: "center",
-    gap: "20px",
-    flexWrap: "wrap"
-  };
-
-  const galleryItemStyle = {
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "center"
-  };
-
-  const imgStyle = {
-    width: "200px",
-    height: "200px",
-    objectFit: "cover",
-    borderRadius: "8px",
-    boxShadow: "0 3px 6px rgba(0,0,0,0.15)",
-    marginBottom: "8px"
-  };
-
-  const captionStyle = {
-    fontWeight: "bold",
-    color: "#333"
+  const listItemStyle = {
+    background: "#fff",
+    padding: "12px 16px",
+    borderRadius: "10px",
+    boxShadow: "0 4px 12px rgba(0,0,0,0.06)",
+    marginBottom: "10px",
+    fontWeight: "600",
+    color: "#0b3556",
   };
 
   return (
     <div style={containerStyle}>
-      <h2 style={h2Style}>Welcome to Build B - Floor 2</h2>
-      <h3 style={h3Style}>Record and store </h3>
-   
+      <h2 style={titleStyle}>Welcome to Build B - Floor 2</h2>
+      <h3 style={subTitleStyle}>Record and Storage Offices</h3>
 
-      <ul style={listStyle}><h3>our services</h3>
-        <li>1.Record Room </li>
-        <li>2.store</li>
-        <li>3.external letter</li>
-        <li>4.internal letter</li>
+      <h2 style={sectionTitle}>Our Services</h2>
+      <ul style={listStyle}>
+        <li style={listItemStyle}>🗂️ Record Room</li>
+        <li style={listItemStyle}>📦 Store</li>
+        <li style={listItemStyle}>✉️ External Letters</li>
+        <li style={listItemStyle}>📩 Internal Letters</li>
       </ul>
-<h1>Name of Directors</h1>
-      {/* Gallery */}
-      {/* <div style={galleryStyle}>
-        <div style={galleryItemStyle}>
-          <img src={zdImage} alt="ZD" style={imgStyle} />
-          <p style={captionStyle}>Dawit Tamene</p>
-        </div>
-        <div style={galleryItemStyle}>
-          <img src={zddImage} alt="ZDD" style={imgStyle} />
-          <p style={captionStyle}>Kllu Tamene</p>
-           
-        </div>
-        <div style={galleryItemStyle}>
-          <img src={morImage} alt="MOR" style={imgStyle} />
-          <p style={captionStyle}>Kuratu Lemma</p>
-        </div>
-      </div> */}
+
+      <h2 style={sectionTitle}>Directors</h2>
+      <ul style={listStyle}>
+        <li style={listItemStyle}>Director 1</li>
+        <li style={listItemStyle}>Director 2</li>
+      </ul>
     </div>
   );
 }
